@@ -22,7 +22,7 @@
 				topicsOnly: '',
 				messageContent: ''
 			},
-			regex: /https:\/\/discordapp\.com\/api\/webhooks\/([0-9]+?)\/(.+?)$/
+			regex: /https:\/\/discord(?:app)?\.com\/api\/webhooks\/([0-9]+?)\/(.+?)$/
 		};
 
 	plugin.init = function(params, callback) {
@@ -99,7 +99,7 @@
 
 					// Send notification:
 					if (hook) {
-						hook.sendMessage(messageContent, {embeds: [embed]}).catch(console.error);
+						hook.send(messageContent, {embeds: [embed]}).catch(console.error);
 					}
 				}
 			});
