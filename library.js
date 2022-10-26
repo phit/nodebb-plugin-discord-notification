@@ -89,7 +89,7 @@
 					var messageContent = plugin.config['messageContent'] || '';
 
 					// Make the rich embed:
-					var embed = new Discord.RichEmbed()
+					var embed = new Discord.MessageEmbed()
 						.setColor(data.category.bgColor)
 						.setURL(forumURL + '/topic/' + data.topic.slug)
 						.setTitle(data.category.name + ': ' + data.topic.title)
