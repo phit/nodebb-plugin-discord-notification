@@ -1,15 +1,18 @@
 {
-	"id": "nodebb-plugin-discord-notification",
-	"name": "Discord Notifications for NodeBB",
-	"description": "Send notifications of new posts and topics via Discord webhook.",
-	"url": "https://github.com/amargon/nodebb-plugin-discord-notification",
-	"library": "./library.js",
-	"hooks": [
-		{ "hook": "static:app.load", "method": "init" },
-		{ "hook": "filter:admin.header.build", "method": "adminMenu" },
-		{ "hook": "action:post.save", "method": "postSave"}
-	],
-	"templates": "./public/templates",
-	"languages": "./languages",
-	"settingsRoute": "/admin/plugins/discord-notification"
+  "id": "nodebb-plugin-discord-notification",
+  "name": "Discord Notifications for NodeBB",
+  "description": "Send notifications of new posts and topics via Discord webhook.",
+  "url": "https://github.com/amargon/nodebb-plugin-discord-notification",
+  "library": "./library.js",
+  "hooks": [
+    { "hook": "static:app.load", "method": "init" },
+    { "hook": "filter:admin.header.build", "method": "adminMenu" },
+    { "hook": "action:post.save", "method": "postSave" }
+  ],
+  "templates": "./public/templates",
+  "languages": "./languages",
+  "settingsRoute": "/admin/plugins/discord-notification",
+  "modules": {
+    "../admin/plugins/discord-notification.js": "./static/lib/admin.js"
+  }
 }
