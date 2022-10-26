@@ -1,7 +1,7 @@
 {
-  "name": "nodebb-plugin-discord-notification",
+  "name": "@phits/nodebb-plugin-discord-notification",
   "title": "Discord Notifications for NodeBB",
-  "version": "1.4.1",
+  "version": "2.0.0",
   "description": "Send notifications of new posts and topics via Discord webhook.",
   "keywords": [
     "discord",
@@ -27,6 +27,9 @@
     "discord.js": "^12.3.0"
   },
   "nbbpm": {
-    "compatibility": "^1.11.0"
+    "compatibility": "^2.0.0"
+  },
+  "modules": {
+    "../admin/plugins/discord-notification.js": "./static/lib/admin.js"
   }
 }
