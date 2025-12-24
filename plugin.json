@@ -5,8 +5,9 @@
 	"url": "https://github.com/amargon/nodebb-plugin-discord-notification",
 	"library": "./library.js",
 	"hooks": [
-		{ "hook": "static:app.load", "method": "init" },
+		{ "hook": "static:app.load", "method": "onLoad" },
 		{ "hook": "filter:admin.header.build", "method": "addAdminMenu" },
+		{ "hook": "filter:config.get", "method": "getConfig" },
 		{ "hook": "action:post.save", "method": "postSave"}
 	],
 	"modules": {
@@ -14,5 +15,6 @@
 	},
 	"templates": "./public/templates",
 	"languages": "./languages",
+  	"defaultLang": "en_GB",
 	"settingsRoute": "/admin/plugins/discord-notification"
 }
